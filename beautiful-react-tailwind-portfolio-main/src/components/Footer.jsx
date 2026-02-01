@@ -48,7 +48,7 @@ export const Footer = () => {
           <h3 className="text-white font-medium mb-4">Projects</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="https://github.com/ruturaj-biswal/Medical_maj" className="hover:text-white">Health.io</a></li>
-            <li><a href="#" className="hover:text-white">ruturaj-biswal</a></li>
+            <li><a href="https://github.com/ruturaj-biswal/ruturajbiswal" className="hover:text-white">ruturaj-biswal</a></li>
           </ul>
         </div>
 

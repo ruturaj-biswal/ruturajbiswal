@@ -22,7 +22,7 @@ const projects = [
     title: "Developer Portfolio",
     subtitle: "Personal developer portfolio with animations.",
     image: "/projects/portfolio.png",
-    githubUrl: "https://github.com/your-username/portfolio",
+    githubUrl: "https://github.com/ruturaj-biswal/ruturajbiswal",
     description:
       "A modern animated portfolio built with React, Tailwind and Flask.",
     points: [
