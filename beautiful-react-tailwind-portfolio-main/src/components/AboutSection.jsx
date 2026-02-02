@@ -16,10 +16,10 @@ export const AboutSection = () => {
           <div className="flex justify-center lg:justify-start">
             <div className="relative p-[3px] rounded-3xl bg-gradient-to-r from-purple-500 to-pink-500">
               <img
-                src="/scrool.jpeg"
-                alt="Profile"
+                src="/profile.jpeg"
+                alt="Ruturaj Profile"
                 className="
-                  w-80 md:w-80 lg:w-80
+                  w-80
                   aspect-[3/4]
                   object-cover
                   rounded-2xl
@@ -31,13 +31,11 @@ export const AboutSection = () => {
           {/* RIGHT — CONTENT */}
           <div className="space-y-5 text-center lg:text-left">
 
-            {/* HEADING */}
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               Hi there! I&apos;m{" "}
               <span className="text-primary">Ruturaj</span>
             </h2>
 
-            {/* ABOUT TEXT — SMALLER & CLEAN */}
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
               I’m a full-stack developer focused on building impactful and
               user-friendly applications using modern technologies. I enjoy
@@ -56,13 +54,26 @@ export const AboutSection = () => {
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-5 justify-center lg:justify-start pt-2">
-              <a href="https://www.linkedin.com/in/ruturajbiswal1/" className="text-muted-foreground hover:text-primary transition">
+              <a
+                href="https://www.linkedin.com/in/ruturajbiswal1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="https://github.com/ruturaj-biswal" className="text-muted-foreground hover:text-primary transition">
+              <a
+                href="https://github.com/ruturaj-biswal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition"
+              >
                 <Github size={20} />
               </a>
-              <a href="https://mail.google.com/mail/u/0/#inbox" className="text-muted-foreground hover:text-primary transition">
+              <a
+                href="mailto:ruturajbiswal18@gmail.com"
+                className="text-muted-foreground hover:text-primary transition"
+              >
                 <Mail size={20} />
               </a>
             </div>
