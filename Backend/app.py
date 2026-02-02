@@ -3,19 +3,25 @@ from flask_cors import CORS
 import smtplib
 from email.message import EmailMessage
 import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
-# ================================
-# CONFIG (CHANGE THESE)
-# ================================
-SMTP_EMAIL = "munabiswal955@gmail.com"
-SMTP_PASSWORD = "fnazvueuxkyquliw"
+# Read environment variables
+SMTP_EMAIL = os.getenv("SMTP_EMAIL")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
-# ================================
-# ROUTE
-# ================================
+# Debug print (temporary)
+print("SMTP_EMAIL:", SMTP_EMAIL)
+print("SMTP_PASSWORD loaded:", bool(SMTP_PASSWORD))
+
+if not SMTP_EMAIL or not SMTP_PASSWORD:
+    raise RuntimeError("SMTP_EMAIL or SMTP_PASSWORD not set in environment variables")
+
 @app.route("/send-email", methods=["POST"])
 def send_email():
     data = request.json
@@ -34,14 +40,14 @@ def send_email():
         msg["To"] = SMTP_EMAIL
         msg.set_content(
             f"""
-You received a new message from your portfolio website.
+New message from your portfolio website:
 
 Name: {name}
 Email: {email}
 
 Message:
 {message}
-            """
+"""
         )
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
@@ -55,4 +61,4 @@ Message:
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000)

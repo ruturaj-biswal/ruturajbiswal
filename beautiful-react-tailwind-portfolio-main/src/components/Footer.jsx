@@ -23,10 +23,10 @@ export const Footer = () => {
           </p>
 
           <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.linkedin.com/in/ruturajbiswal1/" className="hover:text-white transition">
               <Linkedin size={18} />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://github.com/ruturaj-biswal" className="hover:text-white transition">
               <Github size={18} />
             </a>
           </div>
