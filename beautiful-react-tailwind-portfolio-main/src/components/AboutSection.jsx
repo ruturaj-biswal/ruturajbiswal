@@ -16,7 +16,7 @@ export const AboutSection = () => {
           <div className="flex justify-center lg:justify-start">
             <div className="relative p-[3px] rounded-3xl bg-gradient-to-r from-purple-500 to-pink-500">
               <img
-                src="/profile.jpeg"
+                src="/scrool3.jpeg"
                 alt="Ruturaj Profile"
                 className="
                   w-80
